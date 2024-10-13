@@ -34,7 +34,7 @@ class SimpleTokenizer:
 	def decoder(self, integers):
 		# Getting back the text from token IDs
 		text_list = []
-		for i, val in enumerate(integers):
+		for val in integers:
 			word = self.int_to_str[val]
 			text_list.append(word)
 

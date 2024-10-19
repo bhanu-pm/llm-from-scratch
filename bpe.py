@@ -1,4 +1,6 @@
 # Byte pair encoding for input text
+import bpe_vocab as v
+
 
 class BytePairEncoding():
 	def __init__(self, input_text):
@@ -19,7 +21,10 @@ class BytePairEncoding():
 
 
 if __name__ == "__main__":
-	text = ""
+	vocab_builder_text = ""
+	vocab_builder = v.BPE_Vocab_Builder(vocab_builder_text)
+	vocab_dict = vocab_builder.vocab()
+	text_to_encode = ""
 	bpe = BytePairEncoding()
-	final_tokens = bpe.encoder(text)
+	final_tokens = bpe.encoder(text_to_encode)
 	print(final_tokens)

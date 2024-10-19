@@ -23,7 +23,7 @@ class BytePairEncoding():
 if __name__ == "__main__":
 	vocab_builder_text = ""
 	vocab_builder = v.BPE_Vocab_Builder(vocab_builder_text)
-	vocab_dict = vocab_builder.vocab()
+	vocab_dict = vocab_builder.builder()
 	text_to_encode = ""
 	bpe = BytePairEncoding()
 	final_tokens = bpe.encoder(text_to_encode)

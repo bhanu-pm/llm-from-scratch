@@ -1,4 +1,4 @@
-# Byte Pair encoding Vocab builder 
+# Byte Pair encoding Vocab builder and Merge rules
 
 class BPE_Vocab_Builder():
 	def __init__(self, vocab_builder_text):
@@ -8,7 +8,7 @@ class BPE_Vocab_Builder():
 
 	def builder(self):
 		pass
-
+		
 
 if __name__ == "__main__":
 	vocab_text = ""

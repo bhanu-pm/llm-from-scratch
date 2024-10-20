@@ -1,5 +1,5 @@
 # Byte pair encoding for input text
-import bpe_vocab as v
+import bpe_essentials as e
 
 
 class BytePairEncoding():
@@ -22,7 +22,7 @@ class BytePairEncoding():
 
 if __name__ == "__main__":
 	vocab_builder_text = ""
-	vocab_builder = v.BPE_Vocab_Builder(vocab_builder_text)
+	vocab_builder = e.BPE_Vocab_Builder(vocab_builder_text)
 	vocab_dict = vocab_builder.builder()
 	text_to_encode = ""
 	bpe = BytePairEncoding()

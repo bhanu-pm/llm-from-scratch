@@ -2,7 +2,7 @@
 import torch
 import bpe
 import tokenizer
-import loader
+import token_loader
 
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -10,7 +10,7 @@ vocab_size = 99		# Total size of all possible vocabulary. Get it from bpe_essent
 vocab_dimensions = 3 	# No. of dims used to represent a single vocab token vector.
 
 
-class LLM():
+class LLM(torch.nn.module):
 	def __init__(self, ):
 		pass
 

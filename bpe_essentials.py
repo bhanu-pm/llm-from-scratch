@@ -3,8 +3,16 @@
 class BPE_Vocab_Builder():
 	def __init__(self, vocab_builder_text):
 		self.vocab_builder_text = vocab_builder_text
-		self.vb_text_list = ([i for i in self.vocab_builder_text])
-		self.vb_text_list = list(self.vb_text_list)
+		self.vb_text_list = [i for i in self.vocab_builder_text]
+
+		self.count = 0
+		for i in self.vb_text_list:
+			if (i == ' ') or (i == '/s'):
+				self.count += 1
+				if self.count == 1:
+					pass
+				else:
+					self.vb_text_list.remove(i)
 
 	def builder(self):
 		pass
